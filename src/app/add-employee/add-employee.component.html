@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Employee</h1>
+    
+        <div class="row">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="addEmployee()">
+                    <div class="mb-3">
+                        <label for="idNumber" class="form-label">idNumber</label>
+                        <input type="number" class="form-control" id="id" name="idNumber" [(ngModel)]="addEmployeeRequest.idNumber">
+                    </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="addEmployeeRequest.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="addEmployeeRequest.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="addEmployeeRequest.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNo" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNo" name="phoneNo" [(ngModel)]="addEmployeeRequest.phoneNo">
+                </div>
+                <div class="mb-3">
+                    <label for="basicSalary" class="form-label">Basic Salary</label>
+                    <input type="number" class="form-control" id="basicSalary" name="basicSalary" [(ngModel)]="addEmployeeRequest.basicSalary">
+                </div>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Employee Type</label>
+                    <input type="text" class="form-control" id="type" name="text" [(ngModel)]="addEmployeeRequest.type">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button> 
+            </form>
+            </div>
+        </div>
+    
+</div>
