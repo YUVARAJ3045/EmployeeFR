@@ -24,6 +24,7 @@ employeeDetails:Employee ={
   type:''
 }
 
+// ddflnadsni
 ngOnInit():void
 {
   this.route.paramMap.subscribe({
