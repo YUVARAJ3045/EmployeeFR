@@ -4,6 +4,8 @@ import { CommonModule, NgIfContext } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { __param } from 'tslib';
+import {FormGroup,FormControl,Validators, MaxLengthValidator} from '@angular/forms'
+
 
 @Component({
   selector: 'app-edit-employee',
@@ -23,6 +25,15 @@ employeeDetails:Employee ={
   basicSalary:0,
   type:''
 }
+register=new FormGroup({
+  idNumber:new FormControl(0,[Validators.required]),
+  firstName:new FormControl('',[Validators.minLength(5)]),
+  lastName:new FormControl('',[Validators.required]),
+  email:new FormControl('',[Validators.email]),
+  phoneNo:new FormControl('',[Validators.minLength(10),Validators.maxLength(10)]),
+  basicSalary:new FormControl(0,[Validators.required,Validators.min(10000)]),
+  type:new FormControl('',[Validators.minLength(9),Validators.maxLength(9),Validators.required])
+})
 
 // ddflnadsni
 ngOnInit():void
@@ -63,4 +74,28 @@ deleteEmployee(idNumber:number){
     }
   })
 }
+
+get vidNumber(){
+  return this.register.get("idNumber");
 }
+get vfirstName(){
+  return this.register.get("firstName");
+}
+get vlastName(){
+  return this.register.get("lastName");
+}
+get vemail(){
+  return this.register.get("email");
+}
+get vphoneNo(){
+  return this.register.get("phoneNo");
+}
+get vbasicSalary(){
+  return this.register.get("basicSalary");
+}
+get vtype(){
+  return this.register.get("type");
+}
+}
+
+

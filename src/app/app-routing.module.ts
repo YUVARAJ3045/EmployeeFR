@@ -1,3 +1,4 @@
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path:'employee_list',component:EmployeeListComponent},
   {path:'',component:HomeComponent},
   {path:'add_employee',component:AddEmployeeComponent},
-  {path:'employee_list/edit_employee/:id',component:EditEmployeeComponent} 
+  {path:'employee_list/edit_employee/:id',component:EditEmployeeComponent},
+  {path:'employee_list/view_employee/:id',component:ViewEmployeeComponent}
   
 ];
 

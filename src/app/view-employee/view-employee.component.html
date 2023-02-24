@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <h1 class="mb-3">Employee Detail of {{employeeDetails.firstName}} {{employeeDetails.lastName}}</h1>
+    
+        <h3> IdNumber : {{employeeDetails.idNumber}}</h3>
+        <h3> First Name : {{employeeDetails.firstName}}</h3>
+        <h3> Last Name : {{employeeDetails.lastName}}</h3>
+        <h3>Email : {{employeeDetails.email}}</h3>
+        <h3>Phone Number : {{employeeDetails.phoneNo}}</h3>
+        <h3>Basic salary:{{employeeDetails.basicSalary}}</h3>
+        <h3 *ngIf="employeeDetails.type==tp">Net Salary:{{employeeDetails.basicSalary+employeeDetails.basicSalary*0.3}}</h3>
+        <h3 *ngIf="employeeDetails.type!=tp">Net Salary:{{employeeDetails.basicSalary+employeeDetails.basicSalary*0.1}}</h3>
+        <h3>Employee Type:{{employeeDetails.type}}</h3>
+    
+</div>
+
+<router-outlet></router-outlet>

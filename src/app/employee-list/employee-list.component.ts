@@ -25,29 +25,32 @@ export class EmployeeListComponent implements OnInit{
 
   })
 }
+salary=0;
+
+
 }
 
 
-// { id:1,
-  //   FirstName:'Yuvaraj',
-  //   LastName:'S',
-  //   Email:'yuvaraj@gmail.com',
-  //   PhoneNo:'8610435825',
-  //   BasicSalary:20000,
-  //   Type:'Permanent'},
-  //   {        
-  //   id:2,
-  //   FirstName:'Sujith',
-  //   LastName:'N M',
-  //   Email:'sujith@gmail.com',
-  //   PhoneNo:'9894735825',
-  //   BasicSalary:10000,
-  //   Type:'Temporary'},
-  //   { 
-  //   id:3,
-  //   FirstName:'Shamna',
-  //   LastName:'P',
-  //   Email:'shamna@gmail.com',
-  //   PhoneNo:'9486563619',
-  //   BasicSalary:10000,
-  //   Type:'Permanent'},
+// { idNumber:1,
+//   firstName:'Yuvaraj',
+//   lastName:'S',
+//   email:'yuvaraj@gmail.com',
+//   phoneNo:'8610435825',
+//   basicSalary:20000,
+//   type:'Permanent'},
+//   {        
+//   idNumber:2,
+//   firstName:'Sujith',
+//   lastName:'N M',
+//   email:'sujith@gmail.com',
+//   phoneNo:'9894735825',
+//   basicSalary:10000,
+//   type:'Temporary'},
+//   { 
+//   idNumber:3,
+//   firstName:'Shamna',
+//   lastName:'P',
+//   email:'shamna@gmail.com',
+//   phoneNo:'9486563619',
+//   basicSalary:10000,
+//   type:'Permanent'}
