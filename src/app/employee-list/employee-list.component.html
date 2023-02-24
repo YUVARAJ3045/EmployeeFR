@@ -11,6 +11,7 @@
                 <th>Employee Type</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,9 +22,10 @@
                 <td>{{items.phoneNo}}</td>
                 <td>{{items.basicSalary}}</td>
                 <td>{{items.type}}</td>
-                <td></td>
+                <td><button type="button" class="btn btn-danger" routerLink="delete_employee/{{items.idNumber}}" >Delete</button></td>
                 <td><a routerLink="edit_employee/{{items.idNumber}}">Edit</a></td>
                 <td><a routerLink="view_employee//{{items.idNumber}}">View</a></td>
+                
                 
             </tr>
         </tbody>

@@ -1,1 +1,5 @@
-<p>delete-employee works!</p>
+<h2>Are you sure want to delete {{employeeDetails.firstName+" "+employeeDetails.lastName}}</h2>
+<button routerLink="" (click)="deleteEmployee(employeeDetails.idNumber)">Yes</button>
+<button routerLink="" >No</button>
+
+<router-outlet></router-outlet>

@@ -65,15 +65,7 @@ updateEmployee(){
   })
 }
 
-deleteEmployee(idNumber:number){
-  this.employeesService.deleteEmployee(idNumber)
-  .subscribe({
-    next: (response)=>{
-      this.router.navigate(['employee_list']);
-      console.log('Deleted');
-    }
-  })
-}
+
 
 get vidNumber(){
   return this.register.get("idNumber");

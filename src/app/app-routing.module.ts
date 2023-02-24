@@ -1,3 +1,4 @@
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'add_employee',component:AddEmployeeComponent},
   {path:'employee_list/edit_employee/:id',component:EditEmployeeComponent},
-  {path:'employee_list/view_employee/:id',component:ViewEmployeeComponent}
+  {path:'employee_list/view_employee/:id',component:ViewEmployeeComponent},
+  {path:'employee_list/delete_employee/:id',component:DeleteEmployeeComponent}
   
 ];
 

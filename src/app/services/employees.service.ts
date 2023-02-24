@@ -27,8 +27,9 @@ export class EmployeesService {
   Observable<Employee>{
     return this.http.put<Employee>(this.baseApiUrl+'/api/employee/',updateEmployeeRequest);
   }
-  deleteEmployee(idNumber:number):Observable<Employee>{
-    return this.http.delete<Employee>(this.baseApiUrl+'/api/employee/'+idNumber);
+  deleteEmployeedetail(idNumber:number):Observable<Employee>{
+    
+    return this.http.delete<Employee>(this.baseApiUrl+'/api/employee/'+idNumber );
   }
 
 }

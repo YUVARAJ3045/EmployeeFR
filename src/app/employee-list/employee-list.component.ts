@@ -26,7 +26,15 @@ export class EmployeeListComponent implements OnInit{
   })
 }
 salary=0;
-
+// deleteEmployee(idNumber:number){
+//   this.employeesService.deleteEmployee(idNumber)
+//   .subscribe({
+//     next: (response)=>{
+//       this.router.navigate(['employee_list']);
+//       console.log('Deleted');
+//     }
+//   })
+// }
 
 }
 
