@@ -3,36 +3,43 @@
     
         <div class="row">
             <div class="col-6">
-                <form #form="ngForm" (ngSubmit)="addEmployee()">
+                <form  [formGroup]="register" (ngSubmit)="addEmployee()">
                     <div class="mb-3">
                         <label for="idNumber" class="form-label">idNumber</label>
-                        <input type="number" class="form-control" id="id" name="idNumber" [(ngModel)]="addEmployeeRequest.idNumber">
+                        <input type="number" class="form-control" id="id" name="idNumber" formControlName="idNumber">
+                        <span style="color: red;" *ngIf="vidNumber && vidNumber.invalid && vidNumber.touched">Invalid Username Format</span>
                     </div>
                 <div class="mb-3">
                     <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="addEmployeeRequest.firstName">
+                    <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName" >
+                    <span style="color: red;" *ngIf="vfirstName && vfirstName.invalid && vfirstName.touched">Invalid Username Format</span>
                 </div>
                 <div class="mb-3">
                     <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="addEmployeeRequest.lastName">
+                    <input type="text" class="form-control" id="lastName" name="lastName"  formControlName="lastName" >
+                    <span style="color: red;" *ngIf="vlastName && vlastName.invalid && vlastName.touched">Invalid Username Format</span>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="addEmployeeRequest.email">
+                    <input type="email" class="form-control" id="email" name="email"  formControlName="email">
+                    <span style="color: red;" *ngIf="vemail && vemail.invalid && vemail.touched">Invalid Username Format</span>
                 </div>
                 <div class="mb-3">
                     <label for="phoneNo" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="phoneNo" name="phoneNo" [(ngModel)]="addEmployeeRequest.phoneNo">
+                    <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo">
+                    <span style="color: red;" *ngIf="vphoneNo && vphoneNo.invalid && vphoneNo.touched">Invalid Username Format</span>
                 </div>
                 <div class="mb-3">
                     <label for="basicSalary" class="form-label">Basic Salary</label>
-                    <input type="number" class="form-control" id="basicSalary" name="basicSalary" [(ngModel)]="addEmployeeRequest.basicSalary">
+                    <input type="number" class="form-control" id="basicSalary" name="basicSalary" formControlName="basicSalary">
+                    <span style="color: red;" *ngIf="vbasicSalary && vbasicSalary.invalid && vbasicSalary.touched">Invalid Username Format</span>
                 </div>
                 <div class="mb-3">
                     <label for="type" class="form-label">Employee Type</label>
-                    <input type="text" class="form-control" id="type" name="text" [(ngModel)]="addEmployeeRequest.type">
+                    <input type="text" class="form-control" id="type" name="text"  formControlName="type">
+                    <span style="color: red;" *ngIf="vtype && vtype.invalid && vtype.touched">Invalid Username Format</span>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button> 
+                <button type="submit" class="btn btn-primary" [disabled]="register.invalid">Submit</button> 
             </form>
             </div>
         </div>

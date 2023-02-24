@@ -8,7 +8,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 
@@ -24,7 +24,7 @@ import { DeleteEmployeeComponent } from './delete-employee/delete-employee.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule
+    AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
