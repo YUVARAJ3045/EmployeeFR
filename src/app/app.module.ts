@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +24,11 @@ import { ViewEmployeeComponent } from './view-employee/view-employee.component';
     AddEmployeeComponent,
     EditEmployeeComponent,
     DeleteEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule
+    AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule,MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,7 +25,7 @@ export class AddEmployeeComponent {
     idNumber:new FormControl(0,[Validators.required]),
     firstName:new FormControl('',[Validators.minLength(5)]),
     lastName:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.email,Validators.pattern('[a-z0-9]+@cirruslabs.io')]),
+    email:new FormControl('',[Validators.email,Validators.pattern('[a-z0-9]+@cirruslabs.io'),Validators.required]),
     phoneNo:new FormControl('',[Validators.minLength(10),Validators.maxLength(10)]),
     basicSalary:new FormControl(0,[Validators.required,Validators.min(10000)]),
     type:new FormControl('',[Validators.minLength(9),Validators.maxLength(9),Validators.required])
@@ -65,4 +65,7 @@ export class AddEmployeeComponent {
   get vtype(){
     return this.register.get("type");
   }
+
+
+  
 }
